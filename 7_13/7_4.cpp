@@ -13,8 +13,8 @@ int main()
  
 double Odds(int num1, int num2, int win1, int win2)
 {
-    double pro1, pro2;
-    pro1 = double(win1) / double(num1);
-    pro2 = double(win2) / double(num2);
+    double pro1=0.0, pro2=0.0;
+    pro1 = win1*1.0 / num1;
+    pro2 = win2*1.0/ num2;
     return  pro1 * pro2;
 }

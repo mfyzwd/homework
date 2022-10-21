@@ -1,6 +1,5 @@
 #include<iostream>
 
-
 struct box
 {
     char make[40];
@@ -10,7 +9,7 @@ struct box
     float volume;
 };
 
-void display(box temp);
+void show(box temp);
 double cal(box *A);
 
 int main(){
@@ -27,26 +26,24 @@ int main(){
     cout << "Enter the volume: ";
     cin >> A.volume;
 
-    display(A);
+    show(A);
     double vol=0.0;
     vol=cal(&A);
 
     return 0;
 }
 
-void display(box A)
+void show(box A)
 {
-    std::cout << "The maker of the box is " << A.make << "." << std::endl;
-    std::cout << "The height of the box is " << A.height << "." << std::endl;
-    std::cout << "The width of the box is " << A.width << "." << std::endl;
-    std::cout << "The length of the box is " << A.length << "." << std::endl;
-    std::cout << "The volume of the box is " << A.volume << "." << std::endl;
+    std::cout << "The maker of the box is " << A.make <<std::endl;
+    std::cout << "The height of the box is " << A.height <<std::endl;
+    std::cout << "The width of the box is " << A.width <<std::endl;
+    std::cout << "The length of the box is " << A.length <<std::endl;
+    std::cout << "The volume of the box is " << A.volume <<std::endl;
 }
 double cal(box *A)
 {
-    double vol;
-    vol = A->height * A->width * A->length;
-    return vol;
+    return A->height * A->width * A->length;
 }
 
 
