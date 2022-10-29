@@ -1,3 +1,8 @@
+/*
+    输入为 asas
+    bs
+*/
+
 #include <iostream>
 #include <cctype>
 #include <string>
