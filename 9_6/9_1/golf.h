@@ -1,4 +1,3 @@
-// golf.h -- for pe9.1
  
 const int Len = 80;
 struct golf

@@ -14,12 +14,13 @@ int setgolf(golf & g)
 {
     using namespace std;
     cout << "Enter the full name of golf player: ";
-    cin.getline(g.fullname, Len).get();
+    cin.getline(g.fullname, Len);
     if(g.fullname==" ")
         return 0;
     cout << "Enter the hanicap of golf player: ";
     cin >> g.handicap;
     cout<<endl;
+    cin.get();
     return 1;
 }
  
