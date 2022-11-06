@@ -23,7 +23,7 @@ int main()
         strcount(input);
         cout << "Enter next line (empty line to quit):\n";
         cin>>input;
-        if (input == "\n")
+        if (input == " ")
             break;
     }
     cout << "Bye\n";

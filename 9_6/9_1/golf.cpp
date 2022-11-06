@@ -15,7 +15,7 @@ int setgolf(golf & g)
     using namespace std;
     cout << "Enter the full name of golf player: ";
     cin.getline(g.fullname, Len);
-    if(g.fullname==" ")
+    if(strcmp(g.fullname,'\0')<0)
         return 0;
     cout << "Enter the hanicap of golf player: ";
     cin >> g.handicap;
