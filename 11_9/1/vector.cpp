@@ -85,10 +85,17 @@ namespace VECTOR
 	{
 		mode = RECT;
 	}
+	Vector Vector::operator+=(const Vector &b) 
+	{
+		x += b.x;
+		y += b.y;
+		return *this;
+	}
 	Vector Vector::operator+(const Vector &b) const
 	{
 		return Vector(x + b.x, y + b.y);
 	}
+
 	Vector Vector::operator-(const Vector &b) const
 	{
 		return Vector(x - b.x, y - b.y);
@@ -108,9 +115,9 @@ namespace VECTOR
 	std::ostream &operator<<(std::ostream &os, const Vector &v)
 	{
 		if(v.mode == Vector::RECT)
-			os << "x, y = " << v.x << ", " << v.y << std::endl;
+			os << "(x, y) = " << v.x << ", " << v.y ;
 		else if(v.mode == Vector::POL)
-			os << "mag, ang = " << v.mag << ", " << v.ang << std::endl;
+			os << "(mag, ang) = " << v.mag << ", " << v.ang ;
 		else
 			os << "Invalid mode" << std::endl;
 

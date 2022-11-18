@@ -40,7 +40,7 @@ int main(void)
             fout<<step<<": (x,y) = "<<result<<endl;
 			direction = rand() % 360;
 			step.reset(dstep, direction, Vector::POL);
-			result = result + step;
+			result += step;
 			steps++;
 		}
 
@@ -66,6 +66,7 @@ int main(void)
     cin.clear();
     while(cin.get() != '\n')
         continue;
+	fout.close();   //关闭文件
 
 	return 0;
 }

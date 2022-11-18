@@ -49,15 +49,27 @@ Time operator-(const Time & t, const Time & t1)
     return diff;
 }
  
-Time Time::operator*( double mult) const
+Time operator*(const Time &s, double m)
 {
-    Time result;
-    long totalminutes = hours * mult * 60 + minutes * mult;
-    result.hours = totalminutes / 60;
-    result.minutes = totalminutes % 60;
-    return result;
+	Time result;
+
+	long totalminutes = s.hours*m*60 + s.minutes*m;
+	result.hours = totalminutes / 60;
+	result.minutes = totalminutes % 60;
+
+	return result;
 }
- 
+
+Time operator*(double m, const Time &t)
+{
+	Time result;
+
+	long totalminutes = t.hours*m*60 + t.minutes*m;
+	result.hours = totalminutes / 60;
+	result.minutes = totalminutes % 60;
+
+	return result;
+}
 std::ostream & operator<<(std::ostream & os, const Time & t)
 {
     os << t.hours << " hours, " << t.minutes << " minutes";

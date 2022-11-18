@@ -31,6 +31,7 @@ namespace VECTOR
 			void polar_mode();
 			void rect_mode();
 
+			Vector operator+=(const Vector &b);
 			Vector operator+(const Vector &b) const;
 			Vector operator-(const Vector &b) const;
 			Vector operator-() const;

@@ -44,6 +44,6 @@ std::istream &operator>>(std::istream &is, complex &c)
 
 std::ostream &operator<<(std::ostream &os, const complex &c)
 {
-	os << "real = " << c.real << ", imaginary = " << c.imaginary << std::endl;
+	os << "(" << c.real << "," << c.imaginary << "i)";
 	return os;
 }
