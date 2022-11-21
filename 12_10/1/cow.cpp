@@ -4,7 +4,8 @@
 
 Cow::Cow(){
     name[0]='\0';
-    hobby=NULL;
+    hobby=new char[20];
+    strcpy(hobby,"null");
     weight=0.0;
 }
 Cow::Cow(const char *nm,const char *ho,double wt){
