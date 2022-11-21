@@ -2,15 +2,15 @@
 #include "stack.h"
 #include <ctype.h>
 
-const int MAX = 5;
+
 
 int main(void)
 {
     using namespace std;
-	Stack st(MAX);
+	Stack st(5);
 	Item item;
 
-	for(int i = 0; i < MAX; i++)
+	for(int i = 0; i < 5; i++)
 	{
 		cout << "Enter a number you want to push to stack: " << endl;
 		cin >> item;
@@ -19,7 +19,7 @@ int main(void)
 	}
 
 	Stack st_new(st);
-	for(int i = 0; i < MAX; i++)
+	for(int i = 0; i < 5; i++)
 	{
 		st_new.pop(item);
 		cout << item << " is poped." << endl;

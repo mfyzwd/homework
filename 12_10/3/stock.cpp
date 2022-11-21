@@ -3,8 +3,8 @@
 #include <cstring>
 
 Stock::Stock()
-{
-	company = NULL;
+{	company = new char[20];
+	strcpy(company,"no name");
 	shares = 0;
 	share_val = 0.0;
 	total_val = 0.0;

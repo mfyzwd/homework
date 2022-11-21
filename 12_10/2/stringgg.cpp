@@ -1,4 +1,4 @@
-#include "string.h"
+#include "stringg.h"
 #include <cstring>
 #include <ctype.h>
 
@@ -106,7 +106,7 @@ std::istream &operator>>(std::istream &is, String &st)
 String operator+(const char *s, const String &st)
 {
 	String temp;
-
+	delete [] temp.str;
 	temp.len = strlen(s) + st.len;
 	temp.str = new char[temp.len + 1];
 	strcpy(temp.str, s);

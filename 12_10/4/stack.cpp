@@ -21,10 +21,10 @@ bool Stack::isempty() const{
         return top==0;
 }
 bool Stack::isfull() const{
-        return top ==MAX;
+        return top ==size;
 }
 bool Stack::push(Item &item){
-    if(top<MAX){
+    if(top<size){
         pitems[top++]=item;
         return true;
     }

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "string.h"
+#include "stringg.h"
 
 using namespace std;
  
